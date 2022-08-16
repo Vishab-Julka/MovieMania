@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import DefaultHOC from "./HOC/DefaultHoc";
+
+function HomePage()
+{
+  return <h1>This is Home Page inserted btw the header and the footer</h1>
+}
+
+function ContactPage()
+{
+  return <h1>This is Contact Page inserted btw the header and the footer</h1>
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DefaultHOC path="/" exact component={HomePage} />
+      <DefaultHOC path="/contact" exact component={ContactPage} />
     </div>
   );
 }
