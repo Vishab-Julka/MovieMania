@@ -1,10 +1,6 @@
 import React from "react";
 import DefaultHOC from "./HOC/DefaultHoc";
-
-function HomePage()
-{
-  return <h1>This is Home Page inserted btw the header and the footer</h1>
-}
+import HomePage from "./Pages/HomePage";
 
 function ContactPage()
 {
